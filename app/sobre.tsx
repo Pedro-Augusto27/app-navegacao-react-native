@@ -1,5 +1,6 @@
+import Button from "@/components/Button";
 import { useRouter } from "expo-router";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function Sobre() {
     const router = useRouter();
@@ -8,11 +9,15 @@ export default function Sobre() {
             <Text style={styles.title}>Bem Vindo a tela de Sobre!</Text>
             <Text style={styles.subtitle}>Esta é a tela Sobre, feita como uma atividade do Wagner.</Text>
 
-
+            {/* 
             <TouchableOpacity style={styles.button}
                 onPress={() => router.back()}>
                 <Text style={styles.buttonText}>Voltar</Text>
             </TouchableOpacity>
+            */}
+
+            {/* Botão usando o componente Button do React Native*/}
+            <Button title="Voltar" onPress={() => router.back()} />
         </View>
     );
 

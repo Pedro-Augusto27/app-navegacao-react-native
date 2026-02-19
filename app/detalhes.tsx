@@ -1,5 +1,6 @@
+import Button from "@/components/Button";
 import { useRouter } from "expo-router";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 
 export default function Detalhes() {
     const router = useRouter();
@@ -16,9 +17,15 @@ export default function Detalhes() {
                 Aqui você pode adicionar mais informações.
             </Text>
 
+            {/* 
             <TouchableOpacity style={styles.button} onPress={ () => router.back()}>
                 <Text style={styles.buttonText}>Voltar</Text>
             </TouchableOpacity>
+           */}
+           
+
+            {/* Botão usando o componente Button do React Native*/}
+                <Button title="Voltar" onPress={() => router.back()} />
         </View>
     );
 }
@@ -65,7 +72,7 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
 
-    description:{
+    description: {
         fontSize: 16,
         color: '#333',
         textAlign: 'center',
