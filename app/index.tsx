@@ -1,4 +1,5 @@
 import { useRouter } from "expo-router";
+
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function Home() {
@@ -13,6 +14,11 @@ export default function Home() {
                 <Text style={styles.buttonText}>Ir para detelhes</Text>
             </TouchableOpacity>
 
+
+          <TouchableOpacity style={styles.button}
+                onPress={() => router.push('/sobre')}>
+                <Text style={styles.buttonText}>Ir para Sobre</Text>
+            </TouchableOpacity>
         </View>
 
     );
